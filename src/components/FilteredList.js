@@ -4,7 +4,7 @@ import filterChoice from './FilterSelect'
 
 function List(props) {
   return (
-    <div>
+    <div className='container'>
       FilteredEmployees
       <table>
         <tbody>

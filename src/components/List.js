@@ -3,7 +3,7 @@ import './List.css';
 
 function List(props) {
   return (
-    <div>
+    <div className='container'>
       Employees
       <table>
         <tbody>

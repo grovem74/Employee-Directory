@@ -4,8 +4,7 @@ import FilterChoice from "./FilterSelect";
 
 function FilterBtn() {
   return (
-    <div>
-      <FilterSelect />
+    <div className='container'>
       <button onClick={filterData}>FILTER</button> 
     </div>
   )

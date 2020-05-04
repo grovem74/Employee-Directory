@@ -4,6 +4,7 @@ import List from "./components/List";
 import FilteredList from "./components/FilteredList";
 import SortBtn from "./components/SortBtn";
 import FilterBtn from "./components/FilterBtn";
+import FilterSelect from "./components/FilterSelect";
 
 const employees = [
   {
@@ -44,11 +45,12 @@ const employees = [
 
 
 function App() {
-  
+
   return (
     <>
       <List employees={employees} /><br></br>
       <FilteredList employees={employees} /><br></br>
+      <FilterSelect employees={employees} />
       <FilterBtn employees={employees} /><br></br>
       <SortBtn employees={employees} />
     </>

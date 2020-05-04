@@ -5,13 +5,17 @@ export function FilterSelect() {
 
 
   return (
-    <div>
-      {/* <select id="filter" onChange={(event) => this.setState({ value: event.target.value })}> */}
-      <select id="filter" onChange={console.log('filter option changed')}>
-        <option value="lastName">Last Name</option>
-        <option value="title">Title</option>
-        <option value="department">Department</option>
-      </select>
+    <div className='container'>
+      <div className='row'>
+        <div classname='input-field'>
+          <select className="browser-default" id="filter" onChange={(event) => this.setState({ value: event.target.value })}>
+            {/* <select id="filter" onChange={filterChange}> */}
+            <option value="lastName">Last Name</option>
+            <option value="title">Title</option>
+            <option value="department">Department</option>
+          </select>
+        </div>
+      </div>
     </div>
   );
 }

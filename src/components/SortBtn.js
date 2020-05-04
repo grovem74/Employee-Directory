@@ -4,12 +4,14 @@ import React from "react";
 
 function SortBtn(props) {
   return (
-    <button onClick={sortData}>SORT</button>
+    <div className='container'>
+      <button onClick={sortData}>SORT</button>
+    </div>
+
   )
 
   function sortEmployees(data) {
     return console.log(data.sort());
-    // return console.log("hi");
   }
 
   function sortData() {
