@@ -1,11 +1,12 @@
 import React from "react";
+import { Button } from 'react-materialize';
 
 
 
 function SortBtn(props) {
   return (
-    <div className='container'>
-      <button onClick={sortData}>SORT</button>
+    <div>
+      <Button onClick={sortData}>SORT</Button>
     </div>
 
   )

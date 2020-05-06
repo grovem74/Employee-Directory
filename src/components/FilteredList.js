@@ -2,9 +2,11 @@ import React from "react";
 import './List.css';
 import filterChoice from './FilterSelect'
 
+
 function List(props) {
+  console.log(`filterChoice = `, props.employees.filterChoice);
   return (
-    <div className='container'>
+    <div>
       FilteredEmployees
       <table>
         <tbody>
@@ -15,7 +17,7 @@ function List(props) {
             <th>Department</th>
             <th>Salary</th>
           </tr>
-          {props.employees.filter(employee => employee.department === {filterChoice}).map(employee => (
+          {props.employees.filter(employee => employee.department === filterChoice).map(employee => (
 
             <tr key={employee.id}>
               <td >{employee.firstName}</td>

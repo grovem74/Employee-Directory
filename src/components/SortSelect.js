@@ -1,17 +1,15 @@
-import React, { useState } from "react";
+import React from "react";
 import 'materialize-css';
 import { Button, Dropdown } from 'react-materialize';
 
-export function FilterSelect() {
+export let sortChoice = 'IT';
+export function SortSelect() {
 
-  const [filterChoice, setFilterChoice] = useState({
-    filterChoice: 'IT'
-  })
 
   return (
     <div>
       <Dropdown
-        id="filter-drop"
+        id="sort-drop"
         options={{
           alignment: 'left',
           autoTrigger: true,
@@ -27,9 +25,12 @@ export function FilterSelect() {
           onOpenStart: null,
           outDuration: 250
         }}
-        trigger={<Button node="button">FILTER</Button>}
-        onChange={()=>setFilterChoice(filterChoice)}
+        trigger={<Button node="button">SORT</Button>}
+        onChange={sortData}
       >
+        <a href="#">
+          Last Name
+  </a>
         <a href="#">
           Title
   </a>
@@ -40,14 +41,13 @@ export function FilterSelect() {
     </div>
   );
 
-  function filterData() {
-    alert('filtering');
-    // filterEmployees()
-    console.log(`filterChoice = `, filterChoice);
+  function sortData() {
+    alert('sorting');
+    console.log(`sortChoice.value `, sortChoice.value);
 
 
   }
 }
 
-export default FilterSelect;
+export default SortSelect;
 
